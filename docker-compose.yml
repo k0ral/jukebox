@@ -30,3 +30,4 @@ services:
     ports:
       - 6600:6600
       - 8000:8000
+    restart: unless-stopped
