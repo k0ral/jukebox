@@ -21,9 +21,9 @@ services:
     image: tobi312/rpi-mpd
     container_name: mpd
     volumes:
-      - ./mpd/conf:/mpd/conf
-      - ./mpd/data:/mpd/data
-      - ./mpd/playlists:/mpd/playlists
+      - ./mpd/conf/mpd.conf:/etc/mpd.conf
+      - ./mpd/data:/mpd/data:rw
+      - ./mpd/playlists:/mpd/playlists:rw
       - /mnt/storage/music:/music:ro
     devices:
       - /dev/snd:/dev/snd
