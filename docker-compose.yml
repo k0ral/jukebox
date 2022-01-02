@@ -18,7 +18,7 @@ services:
     restart: unless-stopped
 
   mpd:
-    image: tobi312/rpi-mpd
+    image: tobi312/rpi-mpd:debian
     container_name: mpd
     volumes:
       - ./mpd/conf/mpd.conf:/etc/mpd.conf
